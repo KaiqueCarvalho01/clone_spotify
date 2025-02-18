@@ -90,3 +90,34 @@ body {
     cursor: pointer;
     border-radius: 20px;
 }
+
+main {
+    padding: 24px;
+    flex-grow: 1; /* Capacidade que o item tem de crescer*/
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    padding: 8px 12px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.search-bar input {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    margin-left: 10px;
+    width: 100%;
+    outline: none; /* Remove a borda do input */
+} 
+
+.artists-grid, .albums-grid{
+    display: grid; /* Cria um grid */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Cria colunas com o tamanho minimo de 180px e o maximo de 1fr */
+    gap: 24px; 
+    margin-bottom: 40px; 
+}

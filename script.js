@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Zé Neto & Cristiano', image: './assets/artista-ze-neto.jpg' },
         { name: 'Gusttavo Lima', image: './assets/artista-gustavo-limma.jpg'},
         { name: 'Luan Santana', image: './assets/artista-luan-santana.jpg' },
-        { name: 'Matheus & Kauan', image: './assets/artista-mateus- kauan.jpg' }
+        { name: 'Matheus & Kauan', image: './assets/artista-mateus-kauan.jpg' }
         ];
 
     const albumsData = [
@@ -31,19 +31,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const albumsGrid = document.querySelector('.albums-grid'); //M
 
         //Pegando item por item
-        artistsData.forEach(artist => {
+        artistsData.forEach( artist => {
             //Criando um elemento div
             const artistCard = document.createElement('div')
             //Adicionando a classe artist-card ao elemento
             artistCard.classList.add('artist-card')
+
+            
             //Adicionando o HTML do artista ao elemento
-            artistElement.innerHTML = `
+            artistCard.innerHTML = `
             <img src="${artist.image}" alt="${artist.name}">
             <h3>${artist.name}</h3>
             <p>artista</p>
             `
             //Adicionando o elemento ao artistGrid
             artistsGrid.appendChild(artistCard)
+
+        })
+
+        albumsData.forEach( album => {
+            const albumCard = document.createElement('div')
+            albumCard.classList.add('album-card')
+
+            albumCard.innerHTML = `
+            <img src="${album.image}" alt="${album.name}">
+            <p>${album.artist}</p>
+            `
+            albumsGrid.appendChild(albumCard)
         })
 
 })
