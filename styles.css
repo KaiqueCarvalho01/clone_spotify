@@ -121,3 +121,43 @@ main {
     gap: 24px; 
     margin-bottom: 40px; 
 }
+
+.artist-card, .album-card {
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.artist-card:hover, .album-card:hover {
+    background-color: #282828;
+}
+
+.artist-card img, .album-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8%;
+    max-height: 70%;
+}
+
+.artist-card p, .album-card p {
+    font-size: 10px;
+    color: gray;
+}
+
+.artist-card h3, .album-card h3 {
+    font-size: 12px;
+}
+
+.content{
+    margin-top: 40px;
+}
+
+.content h2 {
+    margin-bottom: 10px;
+}
