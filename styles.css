@@ -14,8 +14,8 @@ body {
 
 .container {
     display: flex;
-    /* justify-content: center;  Center horizontally */
-    /* align-items: center;  Center vertically */
+    /* justify-content: center; /* Center horizontally */
+    /* align-items: center;  /*Center vertically */
     height: 100vh;
 }
 
@@ -27,7 +27,7 @@ body {
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
-
+    gap: 1%;
 }
 
 .nav-logo i {
@@ -61,6 +61,11 @@ body {
     cursor: pointer;
     font-size: 12px;
     border-radius: 22px;
+    font-weight: 700;
+}
+
+.nav-playlist button:hover, .nav-podcast button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
 }
 
 .nav-playlist p, .nav-podcast p {
@@ -160,4 +165,42 @@ main {
 
 .content h2 {
     margin-bottom: 10px;
+}
+
+.banner{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background:linear-gradient(90deg, #AF2896 0%, #509BF5 100%);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.banner h2 {
+    font-size: 14px;
+}
+
+.banner p{
+    font-size: 10px;
+}
+
+.banner button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 22px;
+    font-weight: 600;
+    
+}
+
+.banner button:hover{
+    background-color: #52f167 ;
+    transition: background-color 0.3s;
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
 }
